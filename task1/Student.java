@@ -8,7 +8,7 @@
 package com.nickshock.task1;
 
 /**
- * Creates an student with name and mark.
+ * Creates a student with name and mark.
  *
  * @version          1.2 21 May 2018
  * @author           Barysevich Nikalai
