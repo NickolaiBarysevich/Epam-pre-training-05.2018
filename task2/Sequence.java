@@ -15,16 +15,18 @@ package com.nickshock.task2;
  */
 
 public class Sequence {
+    
+    //public static final String NUMBER_ERROR = "wrong number";
 
     /** Check if a number is increasing sequence*/
     public static boolean isIncreasingSequence(int a) {
-        //if (a < 1000 || a > 9999) throw new ArithmeticException("wrong number");
+        //if (a < 1000 || a > 9999) throw new ArithmeticException(NUMBER_ERROR);
         return ((a / 1000) % 10) < ((a / 100) % 10) && ((a / 10) % 10) < a % 10;
     }
 
     /** Check if a number is decreasing sequence*/
     public static boolean isDecreasingSequence(int a) {
-        //if (a < 1000 || a > 9999) throw new ArithmeticException("wrong number");
+        //if (a < 1000 || a > 9999) throw new ArithmeticException(NUMBER_ERROR);
         return ((a / 1000) % 10) > ((a / 100) % 10) && ((a / 10) % 10) > a % 10;
     }
 }
