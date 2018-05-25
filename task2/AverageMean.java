@@ -1,5 +1,5 @@
 /*
- * @(#)AverageMean.java      1.0 25/05/18
+ * @(#)AverageMean.java      2.0 26/05/18
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission.
