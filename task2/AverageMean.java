@@ -17,8 +17,9 @@ package com.nickshock.task2;
 
 public class AverageMean {
 
-//    public static final int MIN_VALUE = 100_000;
-//    public static final int MAX_VALUE = 999_999;
+   //public static final int MIN_VALUE = 100_000;
+   //public static final int MAX_VALUE = 999_999;
+   //public static final String NUMBER_ERROR = "wrong number"; 
 
 
     /** Return the arithmetical mean of numerals of a number*/
@@ -34,7 +35,7 @@ public class AverageMean {
     }
 
 //    public static double arithmeticMean(int a) {
-//        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException("wrong number");
+//        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException(NUMBER_ERROR);
 //
 //        double sum = 0;
 //        byte[] arr = new byte[6];
@@ -60,7 +61,7 @@ public class AverageMean {
         return Math.exp(Math.log(n1 * n2 * n3 * n4 * n5 * n6) / 6);
     }
 //    public static double geometricMean(int a) {
-//        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException("wrong number");
+//        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException(NUMBER_ERROR);
 //
 //        double op = 1;
 //        byte[] arr = new byte[6];
