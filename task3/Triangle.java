@@ -32,7 +32,6 @@ public class Triangle {
             if (isRectangular(a, b, c)) {
                 result = "Triangle with this points can exist and it's rectangular.";
             }
-            return result;
         }
         return result;
     }
