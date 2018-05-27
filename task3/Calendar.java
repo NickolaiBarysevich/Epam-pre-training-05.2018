@@ -51,7 +51,6 @@ public class Calendar {
         }
 
         if (day > maxDay) {
-            result = "invalid date";
             return result;
         }
 
