@@ -31,13 +31,13 @@ public class Main {
         System.out.println("is " + a + " = " + b + " = " + c + " --> " + bool);
 
         System.out.println("\n======= Calculating kilograms in milligrams, grams and tons =======");
-        c = DinosaurMass.dinosaurMassInMilligrams(b);
+        c = DinosaurMass.toMilligrams(b);
         System.out.println(b + " kilograms = " + c + " milligrams");
 
-        c = DinosaurMass.dinosaurMassInGrams(b);
+        c = DinosaurMass.toGrams(b);
         System.out.println(b + " kilograms = " + c + " grams");
 
-        double d = DinosaurMass.dinosaurMassInTons(b);
+        double d = DinosaurMass.toTons(b);
         System.out.println(b + " kilograms = " + d + " tons");
 
         System.out.println("\n======= Calculating ring area =======");
