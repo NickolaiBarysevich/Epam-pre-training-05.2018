@@ -1,5 +1,5 @@
 /*
- * @(#)AverageMean.java      2.0 26/05/18
+ * @(#)AverageMean.java      2.1 29/05/18
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission.
@@ -11,7 +11,7 @@ package com.nickshock.task2;
  * This class is used for calculating arithmetic and geometric
  * means of numbers's digits
  *
- * @version          2.0 26 May 2018
+ * @version          2.1 29 May 2018
  * @author           Barysevich Nikalai
  */
 
@@ -23,19 +23,25 @@ public class AverageMean {
 
 
     /** Return the arithmetical mean of numerals of a number*/
-    public static double arithmeticMean(int a) {
-        byte n1 = (byte) ((a / 100_000) % 10);
-        byte n2 = (byte) ((a / 10_000) % 10);
-        byte n3 = (byte) ((a / 1_000) % 10);
-        byte n4 = (byte) ((a / 100) % 10);
-        byte n5 = (byte) ((a / 10) % 10);
-        byte n6 = (byte) (a % 10);
+     /** Return the arithmetical mean of numerals of a number*/
+    public static double getArithmeticMean(int number) {
+        int n1 = number % 10;
+        int n2 = getDigit(number /= 10);
+        int n3 = getDigit(number /= 10);
+        int n4 = getDigit(number /= 10);
+        int n5 = getDigit(number /= 10);
+        int n6 = getDigit(number /= 10);
+        int n7 = getDigit(number /= 10);
 
         return (n1 + n2 + n3 + n4 + n5 + n6) / 6.;
     }
 
-//    public static double arithmeticMean(int a) {
-//        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException(NUMBER_ERROR);
+    public static int getDigit(int number) {
+        return number % 10;
+    }
+
+//    public static double getArithmeticMean(int a) {
+//        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException("wrong number");
 //
 //        double sum = 0;
 //        byte[] arr = new byte[6];
@@ -50,17 +56,18 @@ public class AverageMean {
 //    }
 
     /** Return the geometric mean of numerals of a number*/
-    public static double geometricMean(int a) {
-        byte n1 = (byte) ((a / 100_000) % 10);
-        byte n2 = (byte) ((a / 10_000) % 10);
-        byte n3 = (byte) ((a / 1_000) % 10);
-        byte n4 = (byte) ((a / 100) % 10);
-        byte n5 = (byte) ((a / 10) % 10);
-        byte n6 = (byte) (a % 10);
+    public static double getGeometricMean(int number) {
+        int n1 = number % 10;
+        int n2 = getDigit(number /= 10);
+        int n3 = getDigit(number /= 10);
+        int n4 = getDigit(number /= 10);
+        int n5 = getDigit(number /= 10);
+        int n6 = getDigit(number /= 10);
+        int n7 = getDigit(number /= 10);
 
         return Math.exp(Math.log(n1 * n2 * n3 * n4 * n5 * n6) / 6);
     }
-//    public static double geometricMean(int a) {
+//    public static double getGeometricMean(int a) {
 //        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException(NUMBER_ERROR);
 //
 //        double op = 1;
