@@ -22,17 +22,17 @@ public class DinosaurMass {
     public static final double EXP_FOR_TONS = 0.001;
 
     /** Return dinosaur's mass in milligrams*/
-    public static int dinosaurMassInMilligrams (int killos) {
+    public static int toMilligrams (int killos) {
         return killos * EXP_FOR_MILLIS;
     }
 
     /** Return dinosaur's mass in grams*/
-    public static int dinosaurMassInGrams (int killos) {
+    public static int toGrams (int killos) {
         return killos * EXP_FOR_GRAMS;
     }
 
     /** Return dinosaur's mass in tons*/
-    public static double dinosaurMassInTons (int killos) {
+    public static double toTons (int killos) {
         return killos * EXP_FOR_TONS;
     }
 
