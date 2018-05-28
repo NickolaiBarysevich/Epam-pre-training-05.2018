@@ -1,5 +1,5 @@
 /*
- * @(#)Reverse.java      2.0 26/05/18
+ * @(#)Reverse.java      2.1 29/05/18
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission.
@@ -10,11 +10,11 @@ package com.nickshock.task2;
 /**
  * This class is used for reversing a number
  *
- * @version          2.0 26 May 2018
+ * @version          2.1 29 May 2018
  * @author           Barysevich Nikalai
  */
 
-public class Reverse {
+public class Reversation {
 
 //    public static final int MIN_VALUE = 1_000_000;
 //    public static final int MAX_VALUE = 9_999_999;
