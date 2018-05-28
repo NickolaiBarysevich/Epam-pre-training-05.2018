@@ -1,10 +1,10 @@
 /*
- * @(#)Triangle.java            1.2 2018
+ * @(#)Triangle.java            1.3 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 27.05.18 23:30
+ * Last modified: 29.05.18 00:41
  */
 
 package com.nickshock.task3;
@@ -12,18 +12,17 @@ package com.nickshock.task3;
 /**
  * This class defines whether there is a triangle with transmitted vertices
  *
- * @version          1.2 27 May 2018
+ * @version          1.3 28 May 2018
  * @author           Barysevich Nikalai
  */
 
 public class Triangle {
 
-    /** Defines is a triangle exists*/
-    public static String isTriangle(int x1, int y1, int x2,
-                                    int y2, int x3, int y3) {
-        double a = Math.sqrt(Math.pow((y2 - y1), 2) + Math.pow((x2 - x1), 2));
-        double b = Math.sqrt(Math.pow((y3 - y2), 2) + Math.pow((x3 - x2), 2));
-        double c = Math.sqrt(Math.pow((y3 - y1), 2) + Math.pow((x3 - x1), 2));
+   /** Defines is a triangle exists*/
+    public static String isTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+        double a = getSide(x1, y1, x2, y2);
+        double b = getSide(x2, y2, x3, y3);
+        double c = getSide(x1, y1, x3, y3);
 
         String result = "Triangle with this points cannot exist.";
 
@@ -31,9 +30,13 @@ public class Triangle {
             result = "Triangle with this points can exist.";
             if (isRectangular(a, b, c)) {
                 result = "Triangle with this points can exist and it's rectangular.";
-            }
+            }            
         }
         return result;
+    }
+
+    public static double getSide(int x1, int y1, int x2, int y2) {
+        return Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
     }
 
     /** Defines whether the triangle is rectangular*/
