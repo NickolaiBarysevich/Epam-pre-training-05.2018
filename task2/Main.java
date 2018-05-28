@@ -1,5 +1,5 @@
 /*
- * @(#)Main.java      1.2 24/05/18
+ * @(#)Main.java      1.3 29/05/18
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission.
@@ -11,7 +11,7 @@ package com.nickshock.task2;
  * The main class, which is the starting point of
  * the program.
  *
- * @version          1.2 25 May 2018
+ * @version          1.3 29 May 2018
  * @author           Barysevich Nikalai
  */
 
@@ -57,10 +57,10 @@ public class Main {
         a = 523423;
         System.out.println("a = " + a);
 
-        d = AverageMean.arithmeticMean(a);
+        d = AverageMean.getArithmeticMean(a);
         System.out.println("arithmetic mean of " + a + " = " + d);
 
-        d = AverageMean.geometricMean(a);
+        d = AverageMean.getGeometricMean(a);
         System.out.println("geometric mean of " + a + " = " + d);
 
         System.out.println("\n======= Reversing =======");
