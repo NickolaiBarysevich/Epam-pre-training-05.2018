@@ -18,6 +18,6 @@ public class EqualLogic {
 
     /** Compares 3 int numbers and return true if they are equal*/
     public static boolean checkEquality(int a, int b, int c) {
-        return (a == b) && (b == c);
+        return a == b && b == c;
     }
 }
