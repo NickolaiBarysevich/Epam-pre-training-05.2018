@@ -41,7 +41,7 @@ public class Main {
         System.out.println(b + " kilograms = " + d + " tons");
 
         System.out.println("\n======= Calculating ring area =======");
-        d = Ring.ringArea(b, a);
+        d = Ring.getRingArea(b, a);
         System.out.println("Ring area with r1 = " + b + " and r2 = " + a + " --> " + d);
 
         System.out.println("\n======= Is number increasing or decreasing sequence =======");
