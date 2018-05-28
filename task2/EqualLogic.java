@@ -1,5 +1,5 @@
 /*
- * @(#)EqualLogic.java      1.0 25/05/18
+ * @(#)EqualLogic.java      1.1 29/05/18
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission.
@@ -10,7 +10,7 @@ package com.nickshock.task2;
 /**
  * This class is used for check the equality of 3 variables
  *
- * @version          1.0 25 May 2018
+ * @version          1.1 29 May 2018
  * @author           Barysevich Nikalai
  */
 
