@@ -23,7 +23,6 @@ public class AverageMean {
 
 
     /** Return the arithmetical mean of numerals of a number*/
-     /** Return the arithmetical mean of numerals of a number*/
     public static double getArithmeticMean(int number) {
         int n1 = number % 10;
         int n2 = getDigit(number /= 10);
