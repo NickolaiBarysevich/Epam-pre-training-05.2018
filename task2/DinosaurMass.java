@@ -1,5 +1,5 @@
 /*
- * @(#)DinosaurMass.java      1.1 26/05/18
+ * @(#)DinosaurMass.java      1.2 29/05/18
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission.
@@ -11,7 +11,7 @@ package com.nickshock.task2;
  * This class is used for calculating dinosaur's mass in milligrams,
  * grams and tons
  *
- * @version          1.1 26 May 2018
+ * @version          1.2 29 May 2018
  * @author           Barysevich Nikalai
  */
 
