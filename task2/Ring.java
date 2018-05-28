@@ -17,8 +17,8 @@ package com.nickshock.task2;
 public class Ring {
 
     /** Return the area of a ring*/
-    public static double ringArea(double r1, double r2) {
-        //if (r2 > r1) throw new ArithmeticException("r1 must be bigger than r2");
-        return Math.PI * (r1 * r1 - r2 * r2);
+     public static double getRingArea(double r1, double r2) {
+        return r1 > r2 ? Math.PI * (r1 * r1 - r2 * r2)
+                        : Math.PI * (r2 * r2 - r1 * r1);
     }
 }
