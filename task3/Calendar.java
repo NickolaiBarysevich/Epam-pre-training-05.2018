@@ -1,18 +1,17 @@
 /*
- * @(#)Calendar.java            1.1 2018
+ * @(#)Calendar.java            1.2 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 27.05.18 23:30
- */
+ * Last modified: 29.05.18 00:58 */
 
 package com.nickshock.task3;
 
 /**
  * This class get date and returns the date that goes after
  *
- * @version          1.1 27 May 2018
+ * @version          1.2 29 May 2018
  * @author           Barysevich Nikalai
  */
 
@@ -33,9 +32,10 @@ public class Calendar {
 
         boolean isLeapYear = false;
 
-        if ((year % 4 == 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)) {
-            isLeapYear = true;
-        }
+         if ((year % 4 == 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)) {  // If the year is multiple of 4
+            isLeapYear = true;                                                           // or 4, 100 and 400 it means
+        }                                                                                // that the year is leap-year.
+
 
         int maxDay;
         switch (month) {
