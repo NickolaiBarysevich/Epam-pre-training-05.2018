@@ -19,28 +19,32 @@ public class Reverse {
 //    public static final int MIN_VALUE = 1_000_000;
 //    public static final int MAX_VALUE = 9_999_999;
 
-    /** Reverse the numerals of a number*/
-    public static int reverse(int a) {
-        byte n1 = (byte) ((a / 100_000_0) % 10);
-        byte n2 = (byte) ((a / 100_000) % 10);
-        byte n3 = (byte) ((a / 10_000) % 10);
-        byte n4 = (byte) ((a / 1_000) % 10);
-        byte n5 = (byte) ((a / 100) % 10);
-        byte n6 = (byte) ((a / 10) % 10);
-        byte n7 = (byte) (a % 10);
+   public static int reverse(int number) {
+        int n1 = number % 10;
+        int n2 = getDigit(number /= 10);
+        int n3 = getDigit(number /= 10);
+        int n4 = getDigit(number /= 10);
+        int n5 = getDigit(number /= 10);
+        int n6 = getDigit(number /= 10);
+        int n7 = getDigit(number /= 10);
 
         int num = 0;
 
-        num += n1;
-        num += n2 * 10;
-        num += n3 * 100;
+        num += n7;
+        num += n6 * 10;
+        num += n5 * 100;
         num += n4 * 1000;
-        num += n5 * 10000;
-        num += n6 * 100000;
-        num += n7 * 1000000;
+        num += n3 * 10000;
+        num += n2 * 100000;
+        num += n1 * 1000000;
 
         return num;
     }
+
+    public static int getDigit(int number) {
+        return number % 10;
+    }
+
 
 //    public static int reverse(int a) {
 //        if (a < MIN_VALUE || a > MAX_VALUE) throw new ArithmeticException("wrong number");
