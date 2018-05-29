@@ -18,7 +18,7 @@ package com.nickshock.task3;
 
 public class Dragon {
 
-    public static final int HEADS_BEFORE201 = 3;
+    public static final int HEADS_BEFORE200 = 3;
     public static final int HEADS_AFTER200 = 2;
     public static final int BORDER_FOR_200 = 200;
     public static final int BORDER_FOR_300 = 300;
@@ -37,12 +37,12 @@ public class Dragon {
         int heads = years;
 
         if (years <= BORDER_FOR_200) {
-            heads *= HEADS_BEFORE201;
+            heads *= HEADS_BEFORE200;
         } else if (years <= BORDER_FOR_300) {
-            heads = BORDER_FOR_200 * HEADS_BEFORE201;
+            heads = BORDER_FOR_200 * HEADS_BEFORE200;
             heads += (years - BORDER_FOR_200) * HEADS_AFTER200;
         } else {
-            heads = BORDER_FOR_200 * HEADS_BEFORE201;
+            heads = BORDER_FOR_200 * HEADS_BEFORE200;
             heads += 100 * HEADS_AFTER200;
             heads += years - BORDER_FOR_300;
         }
