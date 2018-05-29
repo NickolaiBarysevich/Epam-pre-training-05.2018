@@ -26,7 +26,7 @@ public class Triangle {
 
         String result = "Triangle with this points cannot exist.";
 
-        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+        if (a + b > c && a + c > b && b + c > a) {
             result = "Triangle with this points can exist.";
             if (isRectangular(a, b, c)) {
                 result = "Triangle with this points can exist and it's rectangular.";
@@ -41,8 +41,8 @@ public class Triangle {
 
     /** Defines whether the triangle is rectangular*/
     private static boolean isRectangular(double a, double b, double c) {
-        return (a * a + b * b == c * c)
-                || (b * b + c * c == a * a)
-                || (a * a + c * c == b * b);
+        return a * a + b * b == c * c
+                || b * b + c * c == a * a
+                || a * a + c * c == b * b;
     }
 }
