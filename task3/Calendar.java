@@ -32,7 +32,7 @@ public class Calendar {
 
         boolean isLeapYear = false;
 
-         if ((year % 4 == 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)) {  // If the year is multiple of 4
+         if ((year % 4 == 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)) { // If the year is multiple of 4
             isLeapYear = true;                                                           // or 4, 100 and 400 it means
         }                                                                                // that the year is leap-year.
 
