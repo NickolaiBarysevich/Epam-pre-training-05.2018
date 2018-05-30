@@ -53,13 +53,13 @@ public class Calendar {
             return result;
         }
 
-        day += 1;
+        day++;
         if (day > maxDay) {
             day = 1;
-            month += 1;
+            month++;
             if (month > MONTHS) {
                 month = 1;
-                year += 1;
+                year++;
             }
         }
 
