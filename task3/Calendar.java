@@ -49,8 +49,7 @@ public class Calendar {
                 maxDay = DAYS_31;
         }
 
-        if (day > maxDay) {
-            result = "invalid date";
+        if (day > maxDay) {            
             return result;
         }
 
