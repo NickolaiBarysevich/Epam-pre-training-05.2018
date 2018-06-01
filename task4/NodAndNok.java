@@ -24,7 +24,7 @@ public class NodAndNok {
         return b == 0 ? a : getNod(b, a % b);
     }
 
-    /** Counts nod*/
+    /** Counts nok*/
     public static int getNok(int a, int b) {
         return a / getNod(a, b) * b;
     }
