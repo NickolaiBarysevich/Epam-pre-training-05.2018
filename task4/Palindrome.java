@@ -11,7 +11,7 @@
 package com.nickshock.task4;
 
 /**
- * This class defines whether the number is a palindrome
+ * This class defines whether a number is a palindrome
  *
  * @version          2.0 1 June 2018
  * @author           Barysevich Nikalai
