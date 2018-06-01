@@ -39,7 +39,7 @@ public class DifferentDigits {
         return length - amountOfSameDigits;
     }
 
-    /** Return true is digit is single in a number*/
+    /** Return true if digit is single in a number*/
     public static boolean isSingleDigit(int number, int countingDigit) {
         int amount = 0;
 
