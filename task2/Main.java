@@ -67,7 +67,7 @@ public class Main {
         a = a + 1_000_000;
         System.out.println("a = " + a);
 
-        c = Reversation.reverse(a);
+        c = Reversal.reverse(a);
         System.out.println("Reversed " + a + " = " + c);
 
         System.out.println("\n======= Changing values of 2 variables =======");
