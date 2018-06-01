@@ -38,16 +38,16 @@ public class SimpleNumber {
 
     /** Return all simple dividers of a number*/
     public static String findSimpleDividers(int number) {
-        StringBuilder result = new StringBuilder();
+        String result = "";
 
         for (int i = 1; i <= number; i++) {
             if (number % i == 0) {
                 if (isSimple(i)) {
-                    result.append(i + " ");
+                    result += i + " ";
                 }
             }
         }
 
-        return result.toString();
+        return result;
     }
 }
