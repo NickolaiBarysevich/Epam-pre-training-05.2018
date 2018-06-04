@@ -1,10 +1,10 @@
 /*
- * @(#)Calendar.java            1.3 2018
+ * @(#)Calendar.java                  1.4 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 29.05.18 16:33 
+ * Last modified: 04.06.18 23:52
  */
 
 package com.nickshock.task3;
@@ -12,8 +12,8 @@ package com.nickshock.task3;
 /**
  * This class get date and returns the date that goes after
  *
- * @version          1.3 29 May 2018
- * @author           Barysevich Nikalai
+ * @author Barysevich Nikalai
+ * @version 1.4 4 June 2018
  */
 
 public class Calendar {
@@ -24,7 +24,9 @@ public class Calendar {
     public static final int FEBRUARY_DAYS_LEAP = 29;
     public static final int MONTHS = 12;
 
-    /** Counts the next date*/
+    /**
+     * Counts the next date
+     */
     public static String getNextDate(int day, int month, int year) {
         String result = "invalid date";
         if (day > DAYS_31 || day < 1 || month > MONTHS || month < 1 || year < 1) {
@@ -35,21 +37,21 @@ public class Calendar {
 
         int maxDay;
         switch (month) {
+            case 2:
+                maxDay = FEBRUARY_DAYS_NORMAL;
+                if (currentYear) maxDay = FEBRUARY_DAYS_LEAP;
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
                 maxDay = DAYS_30;
                 break;
-            case 2:
-                maxDay = FEBRUARY_DAYS_NORMAL;
-                if (currentYear) maxDay = FEBRUARY_DAYS_LEAP;
-                break;
             default:
                 maxDay = DAYS_31;
         }
 
-        if (day > maxDay) {            
+        if (day > maxDay) {
             return result;
         }
 
@@ -69,12 +71,6 @@ public class Calendar {
     }
 
     public static boolean isLeapYear(int year) {
-        boolean flag = false;
-
-        if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) flag = true;
-        else if (year % 4 == 0 && year % 100 == 0) ;
-        else if (year % 4 == 0) flag = true;
-
-        return flag;
+        return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
     }
 }

@@ -1,10 +1,10 @@
 /*
- * @(#)Vowel.java            1.4 2018
+ * @(#)Vowel.java                  1.5 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 27.05.18 23:30
+ * Last modified: 05.06.18 0:28
  */
 
 package com.nickshock.task3;
@@ -12,25 +12,28 @@ package com.nickshock.task3;
 /**
  * This class defines whether transmitted symbol is a vowel
  *
- * @version          1.4 27 May 2018
- * @author           Barysevich Nikalai
+ * @author Barysevich Nikalai
+ * @version 1.5 5 June 2018
  */
 
 public class Vowel {
 
-    //public final static String VOWEL = "eyuioaEYUIOA";
+    //public final static String VOWEL = "eyuioa";
 
-    /** Defines symbol*/
+    /**
+     * Defines symbol
+     */
     public static boolean isVowel(char symbol) {
+        symbol = Character.toLowerCase(symbol);
         return symbol == 'e' || symbol == 'y' || symbol == 'u' || symbol == 'i'
-                || symbol == 'o' || symbol == 'a' || symbol == 'E' || symbol == 'Y'
-                || symbol == 'U' || symbol == 'I' || symbol == 'O' || symbol == 'A';
+                || symbol == 'o' || symbol == 'a';
     }
 
 //    public static boolean isVowel(char symbol) {
-//        if (symbol == 'e'){
+//        symbol = Character.toLowerCase(symbol);
+//        if (symbol == 'e') {
 //            return true;
-//        } else if (symbol == 'y'){
+//        } else if (symbol == 'y') {
 //            return true;
 //        } else if (symbol == 'u') {
 //            return true;
@@ -40,27 +43,17 @@ public class Vowel {
 //            return true;
 //        } else if (symbol == 'a') {
 //            return true;
-//        } else if (symbol == 'E') {
-//            return true;
-//        } else if (symbol == 'Y') {
-//            return true;
-//        } else if (symbol == 'U') {
-//            return true;
-//        } else if (symbol == 'I') {
-//            return true;
-//        } else if (symbol == 'O') {
-//            return true;
-//        } else if (symbol == 'A') {
-//            return true;
 //        }
 //        return false;
 //    }
 
 //    public static boolean isVowel(char symbol) {
+//        symbol = Character.toLowerCase(symbol);
 //        return !VOWEL.replace(symbol, ' ').equals(VOWEL);
 //    }
 //
 //    public static boolean isVowel(char symbol) {
+//        symbol = Character.toLowerCase(symbol);
 //        switch (symbol) {
 //            case 'e':
 //            case 'y':
@@ -68,12 +61,6 @@ public class Vowel {
 //            case 'i':
 //            case 'o':
 //            case 'a':
-//            case 'E':
-//            case 'Y':
-//            case 'U':
-//            case 'I':
-//            case 'O':
-//            case 'A':
 //                return true;
 //            default:
 //                return false;
@@ -81,6 +68,7 @@ public class Vowel {
 //    }
 
 //    public static boolean isVowel(char symbol) {
+//        symbol = Character.toLowerCase(symbol);
 //        return VOWEL.contains(symbol + "");
 //    }
 }

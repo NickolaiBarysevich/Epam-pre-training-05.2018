@@ -1,19 +1,21 @@
 /*
- * @(#)MoodSensor.java            1.2 2018
+ * @(#)MoodSensor.java                  1.3 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 29.05.18 0:48
+ * Last modified: 05.06.18 0:00
  */
 
 package com.nickshock.task3;
 
+import java.util.Random;
+
 /**
  * This class defines user's mood
  *
- * @version          1.2 29 May 2018
- * @author           Barysevich Nikalai
+ * @author Barysevich Nikalai
+ * @version 1.3 4 June 2018
  */
 
 
@@ -27,10 +29,14 @@ public class MoodSensor {
     public static final int BORDER_FOR_SAD = 25;
     public static final int BORDER_FOR_OK = 50;
     public static final int BORDER_FOR_HAPPY = 75;
+    public static final int RANDOM_RANGE = 100;
 
-    /** Defines mood*/
+    /**
+     * Defines mood
+     */
     public static String getMood() {
-        int rand = (int) (Math.random() * 100);
+        Random rnd = new Random();
+        int rand = rnd.nextInt(RANDOM_RANGE + 1);
 
         String result;
 
