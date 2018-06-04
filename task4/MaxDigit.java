@@ -1,11 +1,10 @@
 /*
- * @(#)MaxDigit.java           1.1 2018
+ * @(#)MaxDigit.java                  1.4 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 01.06.18 0:57
- *
+ * Last modified: 04.06.18 22:12
  */
 
 package com.nickshock.task4;
@@ -13,14 +12,19 @@ package com.nickshock.task4;
 /**
  * This class defines the max digit of a number
  *
- * @version          1.1 31 M1 June 2018
- * @author           Barysevich Nikalai
+ * @author Barysevich Nikalai
+ * @version 1.4 4 June 2018
  */
 
 public class MaxDigit {
 
-    /** Return max digit*/
+    public static final int MAX_DIGIT_VALUE = 9;
+
+    /**
+     * Return max digit
+     */
     public static int getMaxDigit(int number) {
+        number = Math.abs(number);
 
         int max = 0;
         int digit = getLastDigit(number);
@@ -30,7 +34,7 @@ public class MaxDigit {
                 max = digit;
             }
 
-            if (max == 9) {
+            if (max == MAX_DIGIT_VALUE) {
                 break;
             }
             digit = getLastDigit(number /= 10);
@@ -39,7 +43,9 @@ public class MaxDigit {
         return max;
     }
 
-    /** Return last digit*/
+    /**
+     * Return last digit
+     */
     public static int getLastDigit(int number) {
         return number % 10;
     }

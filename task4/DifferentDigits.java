@@ -1,11 +1,10 @@
 /*
- * @(#)DifferentDigits.java           1.8 2018
+ * @(#)DifferentDigits.java                  1.9 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 01.06.18 18:49
- *
+ * Last modified: 04.06.18 22:35
  */
 
 package com.nickshock.task4;
@@ -13,16 +12,17 @@ package com.nickshock.task4;
 /**
  * This class calculates the amount of the different digits in a number
  *
- * @version          1.8 1 June 2018
- * @author           Barysevich Nikalai
+ * @author Barysevich Nikalai
+ * @version 1.9 4 June 2018
  */
 
 public class DifferentDigits {
 
-    /** Return the amount of the different digits*/
+    /**
+     * Return the amount of the different digits
+     */
     public static int countDifferentDigits(int number) {
 
-        int amountOfSameDigits = 0;
         int length = getNumberLength(number);
 
         int digit;
@@ -30,16 +30,18 @@ public class DifferentDigits {
             digit = MaxDigit.getLastDigit(number);
 
             if (!isSingleDigit(number, digit)) {
-                amountOfSameDigits++;
+                length--;
             }
 
             number /= 10;
         }
 
-        return length - amountOfSameDigits;
+        return length;
     }
 
-    /** Return true if digit is single in a number*/
+    /**
+     * Return true if digit is single in a number
+     */
     public static boolean isSingleDigit(int number, int countingDigit) {
         int amount = 0;
 
@@ -63,7 +65,9 @@ public class DifferentDigits {
         return result;
     }
 
-    /** Returns length of a number*/
+    /**
+     * Returns length of a number
+     */
     public static int getNumberLength(int number) {
         int length = 0;
         while (number != 0) {

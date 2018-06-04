@@ -1,11 +1,10 @@
 /*
- * @(#)Palindrome.java           2.0 2018
+ * @(#)Palindrome.java                  2.1 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 01.06.18 0:57
- *
+ * Last modified: 04.06.18 22:17
  */
 
 package com.nickshock.task4;
@@ -13,20 +12,19 @@ package com.nickshock.task4;
 /**
  * This class defines whether a number is a palindrome
  *
- * @version          2.0 1 June 2018
- * @author           Barysevich Nikalai
+ * @author Barysevich Nikalai
+ * @version 2.1 4 June 2018
  */
 
 public class Palindrome {
 
-    /** Return true if a number is a palindrome*/
+    /**
+     * Return true if a number is a palindrome
+     */
     public static boolean isPalindrome(int number) {
-        boolean result = true;
-
-        if (number < 10 && number > -10){
-            return result;
+        if (number < 10) {
+            return number > -1;
         }
-
 
         int first;
         int last;
@@ -36,31 +34,30 @@ public class Palindrome {
             last = MaxDigit.getLastDigit(number);
 
             if (first != last) {
-                result = false;
-                break;
+                return false;
             }
 
             number /= 10;
             number -= first * getFactor(number);
         }
 
-        return result;
+        return true;
     }
 
-    /** Return the first digit of a number*/
+    /**
+     * Return the first digit of a number
+     */
     public static int getFirstDigit(int number) {
-
-        int p = getFactor(number);
-
-        return number/p;
+        return number / getFactor(number);
     }
 
-    /** Return the factor of a number.
+    /**
+     * Return the factor of a number.
      * It's need to calculate the first digit
      */
     public static int getFactor(int number) {
         int factor = 1;
-        while ((number /= 10) != 0){
+        while ((number /= 10) != 0) {
             factor *= 10;
         }
         return factor;
