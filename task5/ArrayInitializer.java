@@ -1,10 +1,10 @@
 /*
- * @(#)MatrixInitializer.java          1.3 2018
+ * @(#)ArrayInitializer.java          1.3 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 05.06.18 22:22
+ * Last modified: 09.06.18 2:31
  */
 
 package com.nickshock.task5;
