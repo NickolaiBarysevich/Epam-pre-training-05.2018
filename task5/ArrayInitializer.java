@@ -1,5 +1,5 @@
 /*
- * @(#)ArrayInitializer.java          1.3 2018
+ * @(#)MatrixInitializer.java          1.3 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
@@ -12,7 +12,7 @@ package com.nickshock.task5;
 import java.util.Random;
 
 /**
- * This class need to fill array with random numbers
+ * This class needs to fill array with random numbers
  *
  * @author Barysevich Nikalai
  * @version 1.3 5 June 2018
@@ -25,7 +25,7 @@ public class ArrayInitializer {
     public static final String OUT_OF_BOUNDS_ERROR = "out of type range bounds";
 
     /**
-     * <p>Initialize the array with random byte values</p>
+     * <p>Initializes the array with random byte values</p>
      *
      * @param array the array to be initialized
      * @throws NullPointerException         if {@code array == null}
@@ -45,7 +45,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random short values</p>
+     * <p>Initializes the array with random short values</p>
      *
      * @param array    the array to be initialized
      * @param maxBound maximum value
@@ -76,7 +76,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random int values</p>
+     * <p>Initializes the array with random int values</p>
      *
      * @param array    the array to be initialized
      * @param maxBound maximum value
@@ -101,7 +101,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random char values</p>
+     * <p>Initializes the array with random char values</p>
      *
      * @param array    the array to be initialized
      * @param maxBound maximum values
@@ -131,7 +131,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random long values</p>
+     * <p>Initializes the array with random long values</p>
      *
      * @param array the array to be initialized
      * @throws NullPointerException         if {@code array == null}
@@ -155,7 +155,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random float values</p>
+     * <p>Initializes the array with random float values</p>
      *
      * @param array the array to be initialized
      * @throws NullPointerException         if {@code array == null}
@@ -179,7 +179,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random double values</p>
+     * <p>Initializes the array with random double values</p>
      *
      * @param array the array to be initialized
      * @throws NullPointerException         if {@code array == null}
@@ -202,7 +202,7 @@ public class ArrayInitializer {
     }
 
     /**
-     * <p>Initialize the array with random boolean values</p>
+     * <p>Initializes the array with random boolean values</p>
      *
      * @param array the array to be initialized
      * @throws NullPointerException         if {@code array == null}

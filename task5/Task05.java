@@ -28,7 +28,7 @@ public class Task05 {
     }
 
     /**
-     * Testing operations on array
+     * Tests operations on array
      */
     public static void test() {
         int[] array = new int[10];
