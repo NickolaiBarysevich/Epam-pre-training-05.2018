@@ -62,8 +62,14 @@ public class MatrixInitializer {
             return "null";
         }
 
-        if (matrix.length == 0 || matrix[0].length == 0) {
-            throw new ArrayTooSmallLengthException(LENGTH_ERROR + MIN_LENGTH);
+        if (matrix.length == 0) {
+            throw new ArrayTooSmallLengthException(MatrixInitializer.LENGTH_ERROR + MatrixInitializer.MIN_LENGTH);
+        }
+
+        for (int[] ints : matrix) {
+            if (ints.length == 0) {
+                throw new ArrayTooSmallLengthException(MatrixInitializer.LENGTH_ERROR + MatrixInitializer.MIN_LENGTH);
+            }
         }
 
         StringBuilder builder = new StringBuilder();
