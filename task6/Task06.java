@@ -25,7 +25,7 @@ public class Task06 {
                                     {11, 20, 19, 3}};
 
     public static void main(String[] args) {
-        test();
+       test();
     }
 
     public static void test() {

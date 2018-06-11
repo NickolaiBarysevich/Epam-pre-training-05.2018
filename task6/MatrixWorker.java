@@ -1,10 +1,10 @@
 /*
- * @(#)MatrixWorker.java          1.3 2018
+ * @(#)MatrixWorker.java          1.4 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 09.06.18 2:02
+ * Last modified: 11.06.18 23:00
  */
 
 package com.nickshock.task6;
@@ -17,7 +17,7 @@ import com.nickshock.task5.ArrayTooSmallLengthException;
  * Such as searching for minimum element of the matrix or transposing.
  *
  * @author Barysevich Nikalai
- * @version 1.3 9 June 2018
+ * @version 1.4 11 June 2018
  */
 
 public class MatrixWorker {
@@ -32,9 +32,16 @@ public class MatrixWorker {
             throw new NullPointerException();
         }
 
-        if (matrix.length == 0 || matrix[0].length == 0) {
+        if (matrix.length == 0) {
             throw new ArrayTooSmallLengthException(MatrixInitializer.LENGTH_ERROR + MatrixInitializer.MIN_LENGTH);
         }
+
+        for (int[] ints : matrix) {
+            if (ints.length == 0) {
+                throw new ArrayTooSmallLengthException(MatrixInitializer.LENGTH_ERROR + MatrixInitializer.MIN_LENGTH);
+            }
+        }
+
     }
 
     /**
@@ -97,14 +104,16 @@ public class MatrixWorker {
         validateArguments(matrix);
 
         double sum = 0;
+        int elementsAmount = 0;
 
         for (int[] ints : matrix) {
             for (int i : ints) {
                 sum += i;
+                elementsAmount++;
             }
         }
 
-        return sum / (matrix.length * matrix[0].length);
+        return sum / elementsAmount;
 
     }
 
@@ -121,6 +130,7 @@ public class MatrixWorker {
         validateArguments(matrix);
 
         double product = 1;
+        int elementsAmount = 0;
 
         for (int[] ints : matrix) {
             for (int i : ints) {
@@ -128,10 +138,11 @@ public class MatrixWorker {
                     return -1;
                 }
                 product *= i;
+                elementsAmount++;
             }
         }
 
-        return Math.exp(Math.log(product) / (matrix.length * matrix[0].length));
+        return Math.exp(Math.log(product) / elementsAmount);
 
     }
 
@@ -184,6 +195,7 @@ public class MatrixWorker {
         return new int[]{-1, -1};
     }
 
+
     /**
      * <p>Transposes the matrix.</p>
      *
@@ -202,6 +214,7 @@ public class MatrixWorker {
                 transposedMatrix[i][j] = matrix[j][i];
             }
         }
+
         return transposedMatrix;
     }
 
@@ -216,8 +229,10 @@ public class MatrixWorker {
     public static void transposeSquareMatrix(int[][] squareMatrix) {
         validateArguments(squareMatrix);
 
-        if (squareMatrix.length != squareMatrix[0].length) {
-            throw new IllegalArgumentException("n != m");
+        for (int[] ints : squareMatrix) {
+            if (squareMatrix.length != ints.length) {
+                throw new IllegalArgumentException("n != m");
+            }
         }
 
         for (int i = 0; i < squareMatrix.length; i++) {
