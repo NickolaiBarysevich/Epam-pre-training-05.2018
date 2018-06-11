@@ -50,7 +50,7 @@ public class MatrixWorker {
      * @param matrix the matrix to be checked.
      * @return min element of the matrix.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static int getMinElement(int[][] matrix) {
         validateArguments(matrix);
@@ -74,7 +74,7 @@ public class MatrixWorker {
      * @param matrix the matrix to be checked.
      * @return min element of the matrix.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static int getMaxElement(int[][] matrix) {
         validateArguments(matrix);
@@ -98,7 +98,7 @@ public class MatrixWorker {
      * @param matrix the matrix to be checked.
      * @return arithmetic mean of the matrix elements.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static double getArithmeticMean(int[][] matrix) {
         validateArguments(matrix);
@@ -124,7 +124,7 @@ public class MatrixWorker {
      * @return geometric mean of the matrix elements,
      * return -1 if matrix contains negative elements.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static double getGeometricMean(int[][] matrix) {
         validateArguments(matrix);
@@ -153,7 +153,7 @@ public class MatrixWorker {
      * @return position of first min local element of the matrix
      * if there is no such element return -1, -1.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static int[] findLocalMin(int[][] matrix) {
         validateArguments(matrix);
@@ -177,7 +177,7 @@ public class MatrixWorker {
      * @return position of first min local element of the matrix
      * if there is no such element return -1, -1.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static int[] findLocalMax(int[][] matrix) {
         validateArguments(matrix);
@@ -202,7 +202,7 @@ public class MatrixWorker {
      * @param matrix the matrix to be transposed.
      * @return transposed matrix.
      * @throws NullPointerException         if {@code matrix == null}
-     * @throws ArrayTooSmallLengthException if {@code matrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static int[][] transposeMatrix(int[][] matrix) {
         validateArguments(matrix);
@@ -223,7 +223,7 @@ public class MatrixWorker {
      *
      * @param squareMatrix the matrix to be transposed.
      * @throws NullPointerException         if {@code squareMatrix == null}
-     * @throws ArrayTooSmallLengthException if {@code squareMatrix.length < MIN_LENGTH}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      * @throws IllegalArgumentException     if {@code squareMatrix.length != squareMatrix[0].length}
      */
     public static void transposeSquareMatrix(int[][] squareMatrix) {

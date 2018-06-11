@@ -55,7 +55,7 @@ public class MatrixInitializer {
      * @param matrix the matrix to be written.
      * @return the matrix into string form
      * if {@code matrix == null} return "null".
-     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0 || matrix[0].length == 0}
+     * @throws ArrayTooSmallLengthException if {@code matrix.length == 0} or {@code ints.length == 0}
      */
     public static String toString(int[][] matrix) {
         if (matrix == null) {
