@@ -10,7 +10,7 @@
 package com.nickshock.task7.utils;
 
 /**
- * Util interface that contains method that needs to be in containers.
+ * Util interface that contains methods that needs to be implemented in containers.
  *
  * @author Barysevich Nikalai
  * @version 1.1 16 June 2018
