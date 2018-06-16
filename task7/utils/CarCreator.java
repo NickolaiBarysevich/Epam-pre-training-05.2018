@@ -54,13 +54,7 @@ public class CarCreator {
      * @return new passenger car.
      */
     public static PassengerCar createPassengerCar() {
-        Random rnd = new Random();
-
-        int sits = rnd.nextInt(PassengerCar.MAX_SITS - PassengerCar.MIN_SITS + 1) + PassengerCar.MIN_SITS;
-        PassengerCar passengerCar = new PassengerCar(createCar(MIN_COST_FOR_PASS_CAR, MAX_COST_FOR_PASS_CAR));
-        passengerCar.setSits(sits);
-
-        return passengerCar;
+        return new PassengerCar(createCar(MIN_COST_FOR_PASS_CAR, MAX_COST_FOR_PASS_CAR));
     }
 
     /**
