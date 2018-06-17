@@ -30,7 +30,6 @@ public class AverageMean {
         int n4 = getDigit(number /= 10);
         int n5 = getDigit(number /= 10);
         int n6 = getDigit(number /= 10);
-        int n7 = getDigit(number /= 10);
 
         return (n1 + n2 + n3 + n4 + n5 + n6) / 6.;
     }

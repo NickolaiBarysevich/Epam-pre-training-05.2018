@@ -1,21 +1,20 @@
 /*
- * @(#)Dragon.java                  1.3 2018
+ * @(#)Dragon.java          1.4 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 04.06.18 23:58
+ * Last modified: 16.06.18 18:47
  */
 
 package com.nickshock.task3;
 
 /**
- * This class count dragon's heads and eyes
+ * This class count dragon's heads and eyes.
  *
  * @author Barysevich Nikalai
- * @version 1.3 4 June 2018
+ * @version 1.4 16 June 2018
  */
-
 public class Dragon {
 
     public static final int HEADS_BEFORE_200 = 3;
@@ -24,9 +23,11 @@ public class Dragon {
     public static final int BORDER_FOR_300 = 300;
     public static final int HEADS_IF_AGE_MORE_THAN_300 = 100;
 
-
     /**
-     * Count heads
+     * Counts heads of the dragon.
+     *
+     * @param age dragons age.
+     * @return amount of dragon's heads.
      */
     public static int countHeads(int age) {
 
@@ -53,7 +54,10 @@ public class Dragon {
     }
 
     /**
-     * Count eyes
+     * Counts dragon's eyes.
+     *
+     * @param heads heads of the dragon.
+     * @return amount of the dragons eyes.
      */
     public static int getEyes(int heads) {
         return heads * 2;

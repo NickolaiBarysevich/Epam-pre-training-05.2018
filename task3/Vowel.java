@@ -1,27 +1,29 @@
 /*
- * @(#)Vowel.java                  1.5 2018
+ * @(#)Vowel.java          1.6 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 05.06.18 0:28
+ * Last modified: 17.06.18 1:07
  */
 
 package com.nickshock.task3;
 
 /**
- * This class defines whether transmitted symbol is a vowel
+ * This class defines whether transmitted symbol is a vowel.
  *
  * @author Barysevich Nikalai
- * @version 1.5 5 June 2018
+ * @version 1.6 17 June 2018
  */
-
 public class Vowel {
 
     //public final static String VOWEL = "eyuioa";
 
     /**
-     * Defines symbol
+     * Defines whether the gotten symbol is vowel.
+     *
+     * @param symbol symbol to be checked.
+     * @return true if symbol is a vowel.
      */
     public static boolean isVowel(char symbol) {
         symbol = Character.toLowerCase(symbol);

@@ -98,18 +98,14 @@ public class TaxiStation {
         garage.removeElement(car);
         onCall.add(car);
 
-        Thread call = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(RIDE_TIME_IN_MILLIS);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                onCall.removeElement(car);
-                garage.add(car);
-
+        Thread call = new Thread(() -> {
+            try {
+                Thread.sleep(RIDE_TIME_IN_MILLIS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+            onCall.removeElement(car);
+            garage.add(car);
         });
 
         trimCalls();

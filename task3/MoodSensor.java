@@ -1,10 +1,10 @@
 /*
- * @(#)MoodSensor.java                  1.3 2018
+ * @(#)MoodSensor.java          1.5 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 05.06.18 0:00
+ * Last modified: 16.06.18 18:47
  */
 
 package com.nickshock.task3;
@@ -12,13 +12,11 @@ package com.nickshock.task3;
 import java.util.Random;
 
 /**
- * This class defines user's mood
+ * This class defines user's mood.
  *
  * @author Barysevich Nikalai
- * @version 1.3 4 June 2018
+ * @version 1.5 16 June 2018
  */
-
-
 public class MoodSensor {
 
     public static final String HAPPY = ":)";
@@ -26,31 +24,23 @@ public class MoodSensor {
     public static final String OK = ":|";
     public static final String LOL = ":D";
 
-    public static final int BORDER_FOR_SAD = 25;
-    public static final int BORDER_FOR_OK = 50;
-    public static final int BORDER_FOR_HAPPY = 75;
-    public static final int RANDOM_RANGE = 100;
+    public static final int VALUE_FOR_SAD = 0;
+    public static final int VALUE_FOR_OK = 1;
+    public static final int VALUE_FOR_HAPPY = 2;
+    public static final int AMOUNT_OF_MOODS = 4;
 
     /**
-     * Defines mood
+     * Defines mood an returns it into string form.
+     *
+     * @return mood into string forms.
      */
     public static String getMood() {
-        Random rnd = new Random();
-        int rand = rnd.nextInt(RANDOM_RANGE + 1);
-
-        String result;
-
-        if (rand < BORDER_FOR_SAD) {
-            result = SAD;
-        } else if (rand < BORDER_FOR_OK) {
-            result = OK;
-        } else if (rand < BORDER_FOR_HAPPY) {
-            result = HAPPY;
-        } else {
-            result = LOL;
+        switch (new Random().nextInt(AMOUNT_OF_MOODS)) {
+            case VALUE_FOR_SAD: return SAD;
+            case VALUE_FOR_OK: return OK;
+            case VALUE_FOR_HAPPY: return HAPPY;
+            default: return LOL;
         }
-
-        return result;
     }
 }
 

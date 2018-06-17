@@ -15,14 +15,14 @@ package com.nickshock.task4;
  * @author Barysevich Nikalai
  * @version 1.0 5 June 2018
  */
-
 public class Task04 {
 
     /**
      * Starting point of the program
      */
     public static void main(String[] args) {
-        test();
+        //test();
+        System.out.println(PerfectNumber.isPerfect(28));
     }
 
     /**
@@ -31,7 +31,7 @@ public class Task04 {
     public static void test() {
         System.out.println("Toss a coin.");
         int throwsAmount = 400;
-        int result = HeadsAndTails.tossACoin(throwsAmount);
+        int result = CoinToss.tossACoin(throwsAmount);
         System.out.println("Heads: " + result);
         System.out.println("Tails: " + (throwsAmount - result));
 
@@ -74,7 +74,7 @@ public class Task04 {
         System.out.println("\nFind amount of different digits in number");
         number = 12133228;
         System.out.println("Number: " + number);
-        int amount = DifferentDigits.countDifferentDigits(number);
+        int amount = DifferentDigit.countDifferentDigits(number);
         System.out.println("The amount of different digits: " + amount);
 
         System.out.println("\nIs number a perfect number?");

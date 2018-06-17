@@ -13,8 +13,8 @@ import com.nickshock.task7.buisnesLogicLayer.entities.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entities.cars.Minibus;
 import com.nickshock.task7.buisnesLogicLayer.entities.cars.PassengerCar;
 import com.nickshock.task7.buisnesLogicLayer.entities.taxiStation.TaxiStation;
-import com.nickshock.task7.buisnesLogicLayer.logic.Administrator;
-import com.nickshock.task7.buisnesLogicLayer.logic.Operator;
+import com.nickshock.task7.buisnesLogicLayer.logic.staff.Administrator;
+import com.nickshock.task7.buisnesLogicLayer.logic.staff.Operator;
 import com.nickshock.task7.presentationLayer.ConsolePrinter;
 import com.nickshock.task7.utils.CarCreator;
 import com.nickshock.task7.utils.ListHelper;
@@ -89,14 +89,14 @@ public class Task07 {
             int passengers = rnd.nextInt(Minibus.MAX_SITS - PassengerCar.MIN_SITS + 1) + PassengerCar.MIN_SITS;
             double order = Operator.takeOrder(station, passengers);
 
-            if (order != -1){
+            if (order != -1) {
                 acceptedOrders++;
                 ConsolePrinter.print("Order with " + passengers
                         + " passengers accepted. Cost for ride: " + order + ".");
+
+            } else {
+                ConsolePrinter.print("Order with " + passengers + " passengers declined.");
             }
-
-            ConsolePrinter.print("Order with " + passengers + " passengers declined.");
-
         }
 
         ConsolePrinter.print("Accepted orders: " + acceptedOrders);

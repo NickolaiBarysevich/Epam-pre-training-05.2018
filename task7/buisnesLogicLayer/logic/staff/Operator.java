@@ -4,10 +4,10 @@
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 16.06.18 18:33
+ * Last modified: 16.06.18 18:34
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic;
+package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
 import com.nickshock.task7.utils.UnlimitedList;
 import com.nickshock.task7.utils.ListHelper;

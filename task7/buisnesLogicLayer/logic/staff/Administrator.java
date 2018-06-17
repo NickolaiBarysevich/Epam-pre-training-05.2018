@@ -1,13 +1,13 @@
 /*
- * @(#)Administrator.java          1.2 2018
+ * @(#)Administrator.java          1.0 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 16.06.18 1:34
+ * Last modified: 16.06.18 18:33
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic;
+package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
 import com.nickshock.task7.utils.UnlimitedList;
 import com.nickshock.task7.buisnesLogicLayer.entities.cars.Car;
