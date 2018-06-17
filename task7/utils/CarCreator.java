@@ -21,7 +21,7 @@ import java.util.Random;
  */
 public class CarCreator {
 
-    public static final String[] carBrands = {"BMV", "OPEL", "AUDI", "HONDA", "MAZDA", "CITROEN", "MERCEDES-BENZ",
+    public static final String[] CAR_BRANDS = {"BMV", "OPEL", "AUDI", "HONDA", "MAZDA", "CITROEN", "MERCEDES-BENZ",
                                                 "VOLVO", "MITSUBISHI", "TOYOTA", "RENO"};
     private static final String LETTERS_FOR_MODEL = "ABCDEFGHIJKLMNOPUVWXYZ";
 
@@ -41,7 +41,7 @@ public class CarCreator {
         Random rnd = new Random();
 
         double cost = rnd.nextInt(maxCost - minCost + 1) + minCost;
-        String carBrand = carBrands[rnd.nextInt(carBrands.length)];
+        String carBrand = CAR_BRANDS[rnd.nextInt(CAR_BRANDS.length)];
         String model = LETTERS_FOR_MODEL.charAt(rnd.nextInt(LETTERS_FOR_MODEL.length()))
                 + "-" + Integer.toString(rnd.nextInt(1000));
 
