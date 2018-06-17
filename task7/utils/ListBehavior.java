@@ -84,4 +84,9 @@ public interface ListBehavior<Type> {
      * @return true if container contains the elements.
      */
     boolean contains(Type... elements);
+
+    boolean equals(Object obj);
+
+    int hashCode();
+
 }

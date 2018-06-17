@@ -124,5 +124,4 @@ public class CarCreator {
         return createMinibus(new Random().nextInt((int) (maxCost - minCost + 1)) + minCost);
     }
 
-
 }
