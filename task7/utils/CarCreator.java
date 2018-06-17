@@ -22,7 +22,7 @@ import java.util.Random;
 public class CarCreator {
 
     public static final String[] CAR_BRANDS = {"BMV", "OPEL", "AUDI", "HONDA", "MAZDA", "CITROEN", "MERCEDES-BENZ",
-                                                "VOLVO", "MITSUBISHI", "TOYOTA", "RENO"};
+            "VOLVO", "MITSUBISHI", "TOYOTA", "RENO"};
     private static final String LETTERS_FOR_MODEL = "ABCDEFGHIJKLMNOPUVWXYZ";
 
     public static final int MIN_COST_FOR_PASS_CAR = 4000;
@@ -31,16 +31,14 @@ public class CarCreator {
     public static final int MAX_COST_FOR_MINIBUS = 10000;
 
     /**
-     * Creates a car with random parameters.
+     * Creates a car with random parameters and specified cost.
      *
-     * @param minCost min bound for car cost.
-     * @param maxCost max bound for car cost.
-     * @return new car.
+     * @param cost the cost of the car.
+     * @return new car
      */
-    public static Car createCar(int minCost, int maxCost) {
+    public static Car createCar(double cost) {
         Random rnd = new Random();
 
-        double cost = rnd.nextInt(maxCost - minCost + 1) + minCost;
         String carBrand = CAR_BRANDS[rnd.nextInt(CAR_BRANDS.length)];
         String model = LETTERS_FOR_MODEL.charAt(rnd.nextInt(LETTERS_FOR_MODEL.length()))
                 + "-" + Integer.toString(rnd.nextInt(1000));
@@ -49,7 +47,18 @@ public class CarCreator {
     }
 
     /**
-     * Creates a passenger car with random parameters.
+     * Creates a car with random parameters and specified min and max cost.
+     *
+     * @param minCost min bound for car cost.
+     * @param maxCost max bound for car cost.
+     * @return new car.
+     */
+    public static Car createCar(double minCost, double maxCost) {
+        return createCar(new Random().nextInt((int) (maxCost - minCost + 1)) + minCost);
+    }
+
+    /**
+     * Creates a passenger car with random parameters and default cost.
      *
      * @return new passenger car.
      */
@@ -58,21 +67,62 @@ public class CarCreator {
     }
 
     /**
-     * Creates a minibus with random parameters.
+     * Creates a passenger car with random parameters and specified cost.
+     *
+     * @param cost the cost of the car.
+     * @return new passenger car.
+     */
+    public static PassengerCar createPassengerCar(double cost) {
+        return new PassengerCar(createCar(cost));
+    }
+
+    /**
+     * Creates a passenger car with random parameters and specified min and max cost.
+     *
+     * @param minCost min cost of the car.
+     * @param maxCost max cost ot the car.
+     * @return new passenger car.
+     */
+    public static PassengerCar createPassengerCar(double minCost, double maxCost) {
+        return new PassengerCar(createCar(minCost, maxCost));
+    }
+
+    /**
+     * Creates a minibus with random parameters and default cost.
      *
      * @return new minibus.
      */
     public static Minibus createMinibus() {
-        Random rnd = new Random();
 
-        int sits = rnd.nextInt(Minibus.MAX_SITS - Minibus.MIN_SITS + 1) + Minibus.MIN_SITS;
-        Minibus Minibus = new Minibus(createCar(MIN_COST_FOR_MINIBUS, MAX_COST_FOR_MINIBUS));
-        Minibus.setSits(sits);
+        int sits = new Random().nextInt(Minibus.MAX_SITS - Minibus.MIN_SITS + 1) + Minibus.MIN_SITS;
+        Minibus minibus = new Minibus(createCar(MIN_COST_FOR_MINIBUS, MAX_COST_FOR_MINIBUS));
+        minibus.setSits(sits);
 
-        return Minibus;
+        return minibus;
     }
 
+    /**
+     * Creates a minibus with random parameters and specified cost.
+     *
+     * @param cost the cost of the minibus.
+     * @return new minibus.
+     */
+    public static Minibus createMinibus(double cost) {
+        Minibus minibus = createMinibus();
+        minibus.setCost(cost);
+        return minibus;
+    }
 
+    /**
+     * Creates a passenger car with random parameters and specified min and max cost.
+     *
+     * @param minCost min cost of minibus.
+     * @param maxCost max cost of minibus.
+     * @return new minibus.
+     */
+    public static Minibus createMinibus(double minCost, double maxCost) {
+        return createMinibus(new Random().nextInt((int) (maxCost - minCost + 1)) + minCost);
+    }
 
 
 }
