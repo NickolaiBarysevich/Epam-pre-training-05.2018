@@ -7,7 +7,7 @@
  * Last modified: 16.06.18 18:17
  */
 
-package com.nickshock.task7.utils;
+package com.nickshock.task7.util;
 
 /**
  * Util class that helps to do some operations on lists.

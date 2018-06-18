@@ -9,9 +9,9 @@
 
 package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
-import com.nickshock.task7.utils.UnlimitedList;
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.Car;
-import com.nickshock.task7.buisnesLogicLayer.entities.taxiStation.TaxiStation;
+import com.nickshock.task7.util.UnlimitedList;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
+import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 
 /**
  * Class that manages taxi station.

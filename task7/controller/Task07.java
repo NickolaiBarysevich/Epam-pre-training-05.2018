@@ -9,15 +9,15 @@
 
 package com.nickshock.task7.controller;
 
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.Car;
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.Minibus;
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.PassengerCar;
-import com.nickshock.task7.buisnesLogicLayer.entities.taxiStation.TaxiStation;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.Minibus;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.PassengerCar;
+import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 import com.nickshock.task7.buisnesLogicLayer.logic.staff.Administrator;
 import com.nickshock.task7.buisnesLogicLayer.logic.staff.Operator;
 import com.nickshock.task7.presentationLayer.ConsolePrinter;
-import com.nickshock.task7.utils.CarCreator;
-import com.nickshock.task7.utils.ListHelper;
+import com.nickshock.task7.util.CarCreator;
+import com.nickshock.task7.util.ListHelper;
 
 import java.util.Random;
 

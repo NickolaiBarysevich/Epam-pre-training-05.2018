@@ -7,9 +7,9 @@
  * Last modified: 16.06.18 17:42
  */
 
-package com.nickshock.task7.utils;
+package com.nickshock.task7.util;
 
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.*;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.*;
 
 import java.util.Random;
 

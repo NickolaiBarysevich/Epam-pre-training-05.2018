@@ -7,7 +7,7 @@
  * Last modified: 16.06.18 1:31
  */
 
-package com.nickshock.task7.buisnesLogicLayer.entities.cars;
+package com.nickshock.task7.buisnesLogicLayer.entity.cars;
 
 /**
  * Entity class that presents a passenger car.

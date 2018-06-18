@@ -9,11 +9,11 @@
 
 package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
-import com.nickshock.task7.utils.UnlimitedList;
-import com.nickshock.task7.utils.ListHelper;
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.Car;
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.Minibus;
-import com.nickshock.task7.buisnesLogicLayer.entities.taxiStation.TaxiStation;
+import com.nickshock.task7.util.UnlimitedList;
+import com.nickshock.task7.util.ListHelper;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.Minibus;
+import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 
 /**
  * Class that answers calls and finds suitable car for the order.

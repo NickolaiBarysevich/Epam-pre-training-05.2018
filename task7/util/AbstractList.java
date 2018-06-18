@@ -7,7 +7,7 @@
  * Last modified: 18.06.18 23:16
  */
 
-package com.nickshock.task7.utils;
+package com.nickshock.task7.util;
 
 import java.util.Arrays;
 

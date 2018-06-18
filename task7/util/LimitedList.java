@@ -1,5 +1,5 @@
 /*
- * @(#)UnlimitedList.java          1.4 2018
+ * @(#)LimitedList.java          1.9 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
@@ -7,23 +7,23 @@
  * Last modified: 18.06.18 23:25
  */
 
-package com.nickshock.task7.utils;
+package com.nickshock.task7.util;
 
-import java.util.Arrays;
 
 /**
- * Container class which allows to add as much elements as needed.
+ * Container class which allows to add as much elements as it was indicated.
  *
  * @param <Type> the type of elements in this list.
  * @author Barysevich Nikalai
- * @version 1.4 18 June 2018
+ * @version 1.9 18 June 2018
  */
-public class UnlimitedList<Type> extends AbstractList<Type> {
+
+public class LimitedList<Type> extends AbstractList<Type> {
 
     /**
      * Constructs an initialises limited list with default capacity.
      */
-    public UnlimitedList() {
+    public LimitedList() {
     }
 
     /**
@@ -31,17 +31,17 @@ public class UnlimitedList<Type> extends AbstractList<Type> {
      *
      * @param abstractList list to be copied.
      */
-    public UnlimitedList(AbstractList<Type> abstractList) {
+    public LimitedList(AbstractList<Type> abstractList) {
         super(abstractList);
     }
 
     /**
-     * Extends the capacity of the value array.
+     * Constructs an initialises limited list with any capacity.
+     *
+     * @param Capacity capacity of this limited list.
      */
-    private void grow() {
-        int oldCapacity = value.length;
-        int newCapacity = oldCapacity + (oldCapacity >> 1);
-        value = Arrays.copyOf(value, newCapacity);
+    public LimitedList(int Capacity) {
+        value = new Object[Capacity];
     }
 
     /**
@@ -50,12 +50,10 @@ public class UnlimitedList<Type> extends AbstractList<Type> {
      * @param element element to be added.
      * @return true if element was added.
      */
-    @Override
     public boolean add(Type element) {
-        if (size >= value.length) {
-            grow();
+        if (size == value.length) {
+            return false;
         }
-
         value[size++] = element;
         return true;
     }
@@ -67,25 +65,22 @@ public class UnlimitedList<Type> extends AbstractList<Type> {
      * @return true if elements was added.
      */
     public boolean add(Type... elements) {
-        for (Type elem : elements) {
-            add(elem);
+        if (size == value.length || size + elements.length >= value.length) {
+            return false;
         }
 
+        for (Type elem : elements) {
+            value[size++] = elem;
+        }
         return true;
     }
 
     /**
-     * Adds all elements ot the gotten list to this list.
+     * Returns the capacity of this list.
      *
-     * @param list list to be added to this list.
-     * @return true if elements was added.
+     * @return the capacity of this list.
      */
-    public boolean add(ListBehavior<Type> list) {
-        for (int i = 0; i < list.getSize(); i++) {
-            add(list.getElement(i));
-        }
-
-        return true;
+    public int getCapacity() {
+        return value.length;
     }
-
 }

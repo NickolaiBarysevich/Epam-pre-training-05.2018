@@ -7,11 +7,11 @@
  * Last modified: 16.06.18 16:28
  */
 
-package com.nickshock.task7.buisnesLogicLayer.entities.taxiStation;
+package com.nickshock.task7.buisnesLogicLayer.entity.taxiStation;
 
 
-import com.nickshock.task7.utils.UnlimitedList;
-import com.nickshock.task7.buisnesLogicLayer.entities.cars.*;
+import com.nickshock.task7.util.UnlimitedList;
+import com.nickshock.task7.buisnesLogicLayer.entity.cars.*;
 
 import java.util.Objects;
 
