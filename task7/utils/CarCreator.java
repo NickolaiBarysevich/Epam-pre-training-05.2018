@@ -31,19 +31,31 @@ public class CarCreator {
     public static final int MAX_COST_FOR_MINIBUS = 10000;
 
     /**
+     * Creates a car with random parameters and default cost.
+     *
+     * @return new car
+     */
+    public static Car createCar() {
+        Random rnd = new Random();
+
+        double cost = rnd.nextInt(MAX_COST_FOR_MINIBUS - MIN_COST_FOR_PASS_CAR + 1) + MIN_COST_FOR_PASS_CAR;
+        String carBrand = CAR_BRANDS[rnd.nextInt(CAR_BRANDS.length)];
+        String model = LETTERS_FOR_MODEL.charAt(rnd.nextInt(LETTERS_FOR_MODEL.length()))
+                + "-" + Integer.toString(rnd.nextInt(1000));
+
+        return new Car(cost, carBrand, model);
+    }
+
+    /**
      * Creates a car with random parameters and specified cost.
      *
      * @param cost the cost of the car.
      * @return new car
      */
     public static Car createCar(double cost) {
-        Random rnd = new Random();
-
-        String carBrand = CAR_BRANDS[rnd.nextInt(CAR_BRANDS.length)];
-        String model = LETTERS_FOR_MODEL.charAt(rnd.nextInt(LETTERS_FOR_MODEL.length()))
-                + "-" + Integer.toString(rnd.nextInt(1000));
-
-        return new Car(cost, carBrand, model);
+        Car car = createCar();
+        car.setCost(cost);
+        return car;
     }
 
     /**

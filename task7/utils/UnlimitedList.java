@@ -1,10 +1,10 @@
 /*
- * @(#)UnlimitedList.java          1.0 2018
+ * @(#)UnlimitedList.java          1.4 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 16.06.18 1:23
+ * Last modified: 18.06.18 23:25
  */
 
 package com.nickshock.task7.utils;
@@ -16,25 +16,23 @@ import java.util.Arrays;
  *
  * @param <Type> the type of elements in this list.
  * @author Barysevich Nikalai
- * @version 1.3 16 June 2018
+ * @version 1.4 18 June 2018
  */
-public class UnlimitedList<Type> extends LimitedList<Type> implements ListBehavior<Type> {
+public class UnlimitedList<Type> extends AbstractList<Type> {
 
     /**
      * Constructs an initialises limited list with default capacity.
      */
     public UnlimitedList() {
-        value = new Object[DEFAULT_CAPACITY];
     }
 
     /**
-     * Constructs an initialises unlimited list with characteristics of gotten list.
+     * Constructs an initialises limited list with characteristics of gotten list.
      *
-     * @param unlimitedList list to be copied.
+     * @param abstractList list to be copied.
      */
-    public UnlimitedList(UnlimitedList<Type> unlimitedList) {
-        value = unlimitedList.value;
-        size = unlimitedList.size;
+    public UnlimitedList(AbstractList<Type> abstractList) {
+        super(abstractList);
     }
 
     /**
@@ -82,11 +80,12 @@ public class UnlimitedList<Type> extends LimitedList<Type> implements ListBehavi
      * @param list list to be added to this list.
      * @return true if elements was added.
      */
-    public boolean add(UnlimitedList<Type> list) {
+    public boolean add(ListBehavior<Type> list) {
         for (int i = 0; i < list.getSize(); i++) {
             add(list.getElement(i));
         }
 
         return true;
     }
+
 }
