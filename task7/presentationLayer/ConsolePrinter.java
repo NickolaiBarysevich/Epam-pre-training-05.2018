@@ -16,7 +16,7 @@ package com.nickshock.task7.presentationLayer;
  * @version 1.2 16 June 2018
  */
 public class ConsolePrinter {
-    
+
     /**
      * Prints gotten char to console.
      *

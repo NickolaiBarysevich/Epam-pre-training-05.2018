@@ -34,12 +34,12 @@ public class Operator {
      */
     public static double takeOrder(TaxiStation station, int passengers) {
 
-        if (station.getGarage().isEmpty()) {
+        if (station.getGarage().isEmpty() || passengers < 1) {
             return -1;
         }
 
         Car car = findCar(station, passengers);
-        if (car == null || passengers < 1) {
+        if (car == null) {
             return -1;
         }
 
