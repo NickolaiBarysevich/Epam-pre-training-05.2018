@@ -16,25 +16,7 @@ package com.nickshock.task7.presentationLayer;
  * @version 1.2 16 June 2018
  */
 public class ConsolePrinter {
-
-    /**
-     * Prints gotten byte to console.
-     *
-     * @param info info to be printed.
-     */
-    public static void print(byte info) {
-        System.out.println(info);
-    }
-
-    /**
-     * Prints gotten short to console.
-     *
-     * @param info info to be printed.
-     */
-    public static void print(short info) {
-        System.out.println(info);
-    }
-
+    
     /**
      * Prints gotten char to console.
      *
