@@ -17,11 +17,11 @@ package com.nickshock.task3;
  */
 public class Dragon {
 
-    public static final int HEADS_BEFORE_200 = 3;
-    public static final int HEADS_AFTER_200 = 2;
-    public static final int BORDER_FOR_200 = 200;
-    public static final int BORDER_FOR_300 = 300;
-    public static final int HEADS_IF_AGE_MORE_THAN_300 = 100;
+    private static final int HEADS_BEFORE_200 = 3;
+    private static final int HEADS_AFTER_200 = 2;
+    private static final int BORDER_FOR_200 = 200;
+    private static final int BORDER_FOR_300 = 300;
+    private static final int HEADS_IF_AGE_MORE_THAN_300 = 100;
 
     /**
      * Counts heads of the dragon.
