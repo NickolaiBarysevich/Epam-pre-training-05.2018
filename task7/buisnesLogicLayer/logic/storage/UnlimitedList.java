@@ -1,13 +1,13 @@
 /*
- * @(#)UnlimitedList.java          1.4 2018
+ * @(#)UnlimitedList.java          1.0 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 18.06.18 23:25
+ * Last modified: 19.06.18 0:46
  */
 
-package com.nickshock.task7.util;
+package com.nickshock.task7.buisnesLogicLayer.logic.storage;
 
 import java.util.Arrays;
 

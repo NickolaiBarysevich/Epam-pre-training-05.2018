@@ -1,13 +1,13 @@
 /*
- * @(#)ListHelper.java          1.2 2018
+ * @(#)ListHelper.java          1.0 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 16.06.18 18:17
+ * Last modified: 19.06.18 0:46
  */
 
-package com.nickshock.task7.util;
+package com.nickshock.task7.buisnesLogicLayer.logic.storage;
 
 /**
  * Util class that helps to do some operations on lists.

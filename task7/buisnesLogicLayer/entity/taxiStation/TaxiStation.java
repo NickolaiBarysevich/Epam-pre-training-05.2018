@@ -10,7 +10,7 @@
 package com.nickshock.task7.buisnesLogicLayer.entity.taxiStation;
 
 
-import com.nickshock.task7.util.UnlimitedList;
+import com.nickshock.task7.buisnesLogicLayer.logic.storage.UnlimitedList;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.*;
 
 import java.util.Objects;
