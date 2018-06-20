@@ -1,10 +1,10 @@
 /*
- * @(#)Minibus.java          1.2 2018
+ * @(#)Minibus.java          1.3 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 16.06.18 15:54
+ * Last modified: 20.06.18 12:49
  */
 
 package com.nickshock.task7.buisnesLogicLayer.entity.cars;
@@ -13,7 +13,7 @@ package com.nickshock.task7.buisnesLogicLayer.entity.cars;
  * Entity class that presents a minibus.
  *
  * @author Barysevich Nikalai
- * @version 1.2 16 June 2018
+ * @version 1.3 20 June 2018
  */
 
 public class Minibus extends Car {
@@ -24,6 +24,10 @@ public class Minibus extends Car {
     /** Sets default value of sits for any minibus.*/
     {
         sits = MIN_SITS;
+    }
+
+    public Minibus() {
+
     }
 
     public Minibus(double cost, String carBrand, String model) {
