@@ -26,8 +26,9 @@ import java.util.Random;
  * Class that manages the project.
  *
  * @author Barysevich Nikalai
- * @version 1.3 21 June 2018
+ * @version 1.4 21 June 2018
  */
+
 public class Task07 {
     /**
      * Runs the program.
@@ -40,7 +41,7 @@ public class Task07 {
      * Represents the work of the project.
      */
     public static void presentation() {
-        TaxiStation station = null; //new TaxiStation("Diamond", 100000);
+        TaxiStation station = new TaxiStation("Diamond", 100000);
         ConsolePrinter.print("New station was created");
         ConsolePrinter.print(station);
         ConsolePrinter.print("");
