@@ -7,7 +7,7 @@
  * Last modified: 19.06.18 0:46
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic.storage;
+package com.nickshock.task7.buisnesLogicLayer.logic.facilities;
 
 /**
  * Util interface that contains methods that needs to be implemented in containers.

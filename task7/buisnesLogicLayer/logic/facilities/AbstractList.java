@@ -7,7 +7,7 @@
  * Last modified: 19.06.18 0:46
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic.storage;
+package com.nickshock.task7.buisnesLogicLayer.logic.facilities;
 
 import java.util.Arrays;
 
@@ -228,6 +228,16 @@ public abstract class AbstractList<Type> implements ListBehavior<Type> {
         }
 
         return true;
+    }
+
+    /**
+     * Set the element into specified position in the list.
+     *
+     * @param index the index of position in which element need to be inserted.
+     * @param element the element to be inserted
+     */
+    void set(int index, Type element) {
+        value[index] = element;
     }
 
     @Override

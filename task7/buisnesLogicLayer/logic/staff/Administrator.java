@@ -9,7 +9,8 @@
 
 package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
-import com.nickshock.task7.buisnesLogicLayer.logic.storage.UnlimitedList;
+import com.nickshock.task7.buisnesLogicLayer.logic.facilities.AbstractList;
+import com.nickshock.task7.buisnesLogicLayer.logic.facilities.UnlimitedList;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 
@@ -30,7 +31,7 @@ public class Administrator {
      */
     public static boolean buyCar(TaxiStation station, Car car) {
 
-        if (car == null) {
+        if (car == null || station == null) {
             return false;
         }
 
@@ -74,6 +75,7 @@ public class Administrator {
      * @param station station to be managed.
      */
     public static double calculateStationCost(TaxiStation station) {
+        if (station == null) return -1;
         UnlimitedList<Car> cars = station.getAllCars();
 
         int carsCost = 0;
@@ -90,43 +92,31 @@ public class Administrator {
     }
 
     /**
-     * Finds the most expensive car.
+     * Represents cars list onto string form.
      *
-     * @param station station to be managed.
-     * @return the most expensive car.
+     * @param station garage of which needs to be represented.
+     * @return car list into string form.
      */
-    public static Car findMostExpensiveCar(TaxiStation station) {
-        UnlimitedList<Car> cars = station.getAllCars();
-
-        Car mostExpensive = cars.getElement(0);
-
-        for (int i = 0; i < cars.getSize(); i++) {
-            if (cars.getElement(i).getCost() > mostExpensive.getCost()) {
-                mostExpensive = cars.getElement(i);
-            }
+    public static String listToString(TaxiStation station) {
+        if (station == null) {
+            return "null";
         }
 
-        return mostExpensive;
-    }
+        AbstractList list = station.getGarage();
 
-    /**
-     * Finds the cheapest car.
-     *
-     * @param station station to be managed.
-     * @return the cheapest car.
-     */
-    public static Car findCheapestCar(TaxiStation station) {
-        UnlimitedList<Car> cars = station.getAllCars();
-
-        Car cheapest = cars.getElement(0);
-
-        for (int i = 0; i < cars.getSize(); i++) {
-            if (cars.getElement(i).getCost() < cheapest.getCost()) {
-                cheapest = cars.getElement(i);
-            }
+        if (list.isEmpty()) {
+            return "empty";
         }
 
-        return cheapest;
+        StringBuilder builder = new StringBuilder();
+        builder.append("{\n");
+        for (int i = 0; i < list.getSize(); i++) {
+            builder.append(list.getElement(i));
+            builder.append("\n");
+        }
+        builder.append("}");
+
+        return builder.toString();
     }
 
 }

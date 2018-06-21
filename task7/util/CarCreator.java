@@ -1,10 +1,10 @@
 /*
- * @(#)CarCreator.java          1.1 2018
+ * @(#)CarCreator.java          1.2 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 16.06.18 17:42
+ * Last modified: 21.06.18 18:12
  */
 
 package com.nickshock.task7.util;
@@ -17,7 +17,7 @@ import java.util.Random;
  * Util class that creates car with random parameters.
  *
  * @author Barysevich Nikalai
- * @version 1.1 16 June 2018
+ * @version 1.2 21 June 2018
  */
 public class CarCreator {
 
@@ -134,6 +134,19 @@ public class CarCreator {
      */
     public static Minibus createMinibus(double minCost, double maxCost) {
         return createMinibus(new Random().nextInt((int) (maxCost - minCost + 1)) + minCost);
+    }
+
+    /**
+     * Creates and return a random car.
+     *
+     * @return a random car.
+     */
+    public static Car getRandomCar() {
+        switch (new Random().nextInt(3)){
+            case 0: return createCar();
+            case 1: return createPassengerCar();
+            default: return createMinibus();
+        }
     }
 
 }

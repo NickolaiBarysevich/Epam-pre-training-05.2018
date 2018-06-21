@@ -10,7 +10,8 @@
 package com.nickshock.task7.buisnesLogicLayer.entity.taxiStation;
 
 
-import com.nickshock.task7.buisnesLogicLayer.logic.storage.UnlimitedList;
+import com.nickshock.task10.pl.ConsolePrinter;
+import com.nickshock.task7.buisnesLogicLayer.logic.facilities.UnlimitedList;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.*;
 
 import java.util.Objects;
@@ -21,7 +22,6 @@ import java.util.Objects;
  * @author Barysevich Nikalai
  * @version 1.7 16 June 2018
  */
-
 public class TaxiStation {
 
     private static final int RIDE_TIME_IN_MILLIS = 60_000;
@@ -102,7 +102,7 @@ public class TaxiStation {
             try {
                 Thread.sleep(RIDE_TIME_IN_MILLIS);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                ConsolePrinter.print("Some unknown situation happened during the ride.");
             }
             onCall.removeElement(car);
             garage.add(car);
@@ -143,6 +143,7 @@ public class TaxiStation {
     }
 
     public UnlimitedList<Car> getAllCars() {
+        if (garage == null) return null;
         UnlimitedList<Car> cars = new UnlimitedList<>(garage);
         cars.add(onCall);
 

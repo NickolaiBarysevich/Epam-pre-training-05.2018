@@ -7,7 +7,7 @@
  * Last modified: 19.06.18 0:46
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic.storage;
+package com.nickshock.task7.buisnesLogicLayer.logic.facilities;
 
 import java.util.Arrays;
 
