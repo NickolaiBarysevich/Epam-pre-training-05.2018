@@ -4,13 +4,14 @@
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 21.06.18 17:32
+ * Last modified: 21.06.18 20:40
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic.facilities;
+package com.nickshock.task9;
 
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
+import com.nickshock.task7.buisnesLogicLayer.logic.facilities.AbstractList;
 
 /**
  * This class sorts cars list by it's cost or amount of sits.
@@ -30,7 +31,7 @@ public class Sorter {
         if (station == null) return;
 
         AbstractList<Car> cars = station.getGarage();
-        int length = cars.size - 1;
+        int length = cars.getSize() - 1;
 
         for (int i = 0; i < length; i++) {
             boolean flag = false;
@@ -56,7 +57,7 @@ public class Sorter {
         if (station == null) return;
 
         AbstractList<Car> cars = station.getGarage();
-        int length = cars.size - 1;
+        int length = cars.getSize() - 1;
 
         for (int i = 0; i < length; i++) {
             if (cars.getElement(i + 1).getCost() < cars.getElement(i).getCost()) {
@@ -82,11 +83,11 @@ public class Sorter {
         if (station == null) return;
 
         AbstractList<Car> cars = station.getGarage();
-        int length = cars.size - 1;
+        int length = cars.getSize() - 1;
 
         for (int i = 0; i < length; i++) {
             int index = i;
-            for (int j = i + 1; j < cars.size; j++) {
+            for (int j = i + 1; j < cars.getSize(); j++) {
                 if (cars.getElement(j).getSits() > cars.getElement(index).getSits()) {
                     index = j;
                 }

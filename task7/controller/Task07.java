@@ -13,8 +13,8 @@ import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Minibus;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.PassengerCar;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
-import com.nickshock.task7.buisnesLogicLayer.logic.facilities.Searcher;
-import com.nickshock.task7.buisnesLogicLayer.logic.facilities.Sorter;
+import com.nickshock.task9.Searcher;
+import com.nickshock.task9.Sorter;
 import com.nickshock.task7.buisnesLogicLayer.logic.staff.Administrator;
 import com.nickshock.task7.buisnesLogicLayer.logic.staff.Operator;
 import com.nickshock.task7.presentationLayer.ConsolePrinter;
@@ -63,21 +63,6 @@ public class Task07 {
         ConsolePrinter.print("\nThe cheapest car:");
         car = Searcher.findCheapestCar(station);
         ConsolePrinter.print(car);
-
-        ConsolePrinter.print("\nSorted cars by cost in ascending order");
-        Sorter.sortByCostAscending(station);
-        carList = Administrator.listToString(station);
-        ConsolePrinter.print(carList);
-
-        ConsolePrinter.print("\nSorted cars by cost in descending order");
-        Sorter.sortByCostDescending(station);
-        carList = Administrator.listToString(station);
-        ConsolePrinter.print(carList);
-
-        ConsolePrinter.print("\nSorted cars by sits in descending order");
-        Sorter.sortBySits(station);
-        carList = Administrator.listToString(station);
-        ConsolePrinter.print(carList);
 
         ConsolePrinter.print("\nStation cost:");
         double cost = Administrator.calculateStationCost(station);

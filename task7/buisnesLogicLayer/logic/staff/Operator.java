@@ -9,7 +9,7 @@
 
 package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
-import com.nickshock.task7.buisnesLogicLayer.logic.facilities.Searcher;
+import com.nickshock.task9.Searcher;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 

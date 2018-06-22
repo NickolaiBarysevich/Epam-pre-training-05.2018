@@ -236,7 +236,7 @@ public abstract class AbstractList<Type> implements ListBehavior<Type> {
      * @param index the index of position in which element need to be inserted.
      * @param element the element to be inserted
      */
-    void set(int index, Type element) {
+    public void set(int index, Type element) {
         value[index] = element;
     }
 
