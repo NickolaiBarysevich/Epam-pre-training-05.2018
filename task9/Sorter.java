@@ -92,6 +92,7 @@ public class Sorter {
                     index = j;
                 }
             }
+            if (index == i) break;
             Car temp = cars.getElement(i);
             cars.set(i, cars.getElement(index));
             cars.set(index, temp);
