@@ -24,7 +24,7 @@ public class Recursion {
      * @return sum of the digits of a number.
      */
     public static int countDigitsSum(int number) {
-        if (number < 0) return number;
+        if (number < 0) return -1;
         if (number < 10) {
             return number;
         }
@@ -39,6 +39,8 @@ public class Recursion {
      * @return raised number to the power of n.
      */
     public static double pow(double x, int n) {
+        if (x == 0) return x;
+        if (n < 1) return -1;
         if (n == 1) {
             return x;
         }
@@ -68,7 +70,7 @@ public class Recursion {
      */
     public static int getFibByIndex(int index) {
         if (index < 2) {
-            if (index < 0){
+            if (index < 0) {
                 return -1;
             }
             return index;
@@ -79,10 +81,10 @@ public class Recursion {
     /**
      * Method solve the "tower of hanoi".
      *
-     * @param rings amount of rings to be replaced.
-     * @param source the first pyramid where rings situated.
+     * @param rings    amount of rings to be replaced.
+     * @param source   the first pyramid where rings situated.
      * @param receiver the pyramid where rings must be.
-     * @param temp temporary pyramid.
+     * @param temp     temporary pyramid.
      */
     public static void resolveHanoi(int rings, char source, char receiver, char temp) {
         if (rings > 0) {
