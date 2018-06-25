@@ -1,10 +1,10 @@
 /*
- * @(#)Task09.java          1.0 2018
+ * @(#)Task09.java          1.1 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 22.06.18 19:53
+ * Last modified: 25.06.18 21:47
  */
 
 package com.nickshock.task9;
@@ -14,6 +14,7 @@ import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 import com.nickshock.task7.buisnesLogicLayer.logic.staff.Administrator;
 import com.nickshock.task7.presentationLayer.ConsolePrinter;
 import com.nickshock.task7.util.CarCreator;
+
 
 public class Task09 {
 
@@ -56,7 +57,17 @@ public class Task09 {
         ConsolePrinter.print(carList);
 
         ConsolePrinter.print("\nSorted cars by sits in descending order");
-        Sorter.sortBySits(station);
+        Sorter.sortBySitsDescending(station);
+        carList = Administrator.listToString(station);
+        ConsolePrinter.print(carList);
+
+        ConsolePrinter.print("\nSorted cars by sits in Ascending order");
+        Sorter.sortBySitsAscending(station);
+        carList = Administrator.listToString(station);
+        ConsolePrinter.print(carList);
+
+        ConsolePrinter.print("\nSorted cars by brand in Ascending order");
+        Sorter.sortByBrand(station);
         carList = Administrator.listToString(station);
         ConsolePrinter.print(carList);
 
