@@ -4,10 +4,10 @@
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 19.06.18 0:46
+ * Last modified: 25.06.18 21:16
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic.facilities;
+package com.nickshock.task7.buisnesLogicLayer.entity.carContainer;
 
 import java.util.Arrays;
 
@@ -238,6 +238,15 @@ public abstract class AbstractList<Type> implements ListBehavior<Type> {
      */
     public void set(int index, Type element) {
         value[index] = element;
+    }
+
+    public Type[] toArray(Type[] a) {
+        if (a.length < size)
+            return (Type[]) Arrays.copyOf(value, size, a.getClass());
+        System.arraycopy(value, 0, a, 0, size);
+        if (a.length > size)
+            a[size] = null;
+        return a;
     }
 
     @Override

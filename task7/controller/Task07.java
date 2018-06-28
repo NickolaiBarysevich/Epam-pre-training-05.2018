@@ -1,10 +1,10 @@
 /*
- * @(#)Task07.java          1.4 2018
+ * @(#)Task07.java          1.5 2018
  *
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 21.06.18 20:26
+ * Last modified: 28.06.18 12:30
  */
 
 package com.nickshock.task7.controller;
@@ -26,21 +26,15 @@ import java.util.Random;
  * Class that manages the project.
  *
  * @author Barysevich Nikalai
- * @version 1.4 21 June 2018
+ * @version 1.5 28 June 2018
  */
 
 public class Task07 {
     /**
      * Runs the program.
-     */
-    public static void main(String[] args) {
-        presentation();
-    }
-
-    /**
      * Represents the work of the project.
      */
-    public static void presentation() {
+    public static void main(String[] args) {
         TaxiStation station = new TaxiStation("Diamond", 100000);
         ConsolePrinter.print("New station was created");
         ConsolePrinter.print(station);
@@ -108,6 +102,6 @@ public class Task07 {
         ConsolePrinter.print("\nBudget before taking orders: " + budget);
         budget = station != null ? station.getBudget() : -1;
         ConsolePrinter.print("\nBudget after orders: " + budget);
-
     }
+
 }

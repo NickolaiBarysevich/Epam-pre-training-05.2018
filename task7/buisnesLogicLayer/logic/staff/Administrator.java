@@ -9,8 +9,8 @@
 
 package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
-import com.nickshock.task7.buisnesLogicLayer.logic.facilities.AbstractList;
-import com.nickshock.task7.buisnesLogicLayer.logic.facilities.UnlimitedList;
+import com.nickshock.task7.buisnesLogicLayer.entity.carContainer.AbstractList;
+import com.nickshock.task7.buisnesLogicLayer.entity.carContainer.UnlimitedList;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
 

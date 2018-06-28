@@ -4,10 +4,10 @@
  * Copyright 1995-1999 Sun Microsystems, Inc.
  * All rights reserved. Used by permission
  *
- * Last modified: 19.06.18 0:46
+ * Last modified: 21.06.18 17:28
  */
 
-package com.nickshock.task7.buisnesLogicLayer.logic.facilities;
+package com.nickshock.task7.buisnesLogicLayer.entity.carContainer;
 
 
 /**
