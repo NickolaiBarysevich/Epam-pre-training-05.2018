@@ -9,6 +9,7 @@
 
 package com.nickshock.task7.buisnesLogicLayer.logic.staff;
 
+import com.nickshock.task7.buisnesLogicLayer.entity.carContainer.AbstractList;
 import com.nickshock.task9.Searcher;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
@@ -55,7 +56,25 @@ public class Operator {
      * @return string form of cars list.
      */
     public static String getCarsOnCall(TaxiStation station) {
-        return Administrator.listToString(station);
+        if (station == null) {
+            return "null";
+        }
+
+        AbstractList list = station.getOnCall();
+
+        if (list.isEmpty()) {
+            return "empty";
+        }
+
+        StringBuilder builder = new StringBuilder();
+        builder.append("{\n");
+        for (int i = 0; i < list.getSize(); i++) {
+            builder.append(list.getElement(i));
+            builder.append("\n");
+        }
+        builder.append("}");
+
+        return builder.toString();
     }
 
 }
