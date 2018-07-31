@@ -12,7 +12,7 @@ package com.nickshock.task9;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Car;
 import com.nickshock.task7.buisnesLogicLayer.entity.cars.Minibus;
 import com.nickshock.task7.buisnesLogicLayer.entity.taxiStation.TaxiStation;
-import com.nickshock.task7.buisnesLogicLayer.logic.facilities.UnlimitedList;
+import com.nickshock.task7.buisnesLogicLayer.entity.carContainer.UnlimitedList;
 
 /**
  * This class finds car that you need. Like the most expensive or cheapest car.
